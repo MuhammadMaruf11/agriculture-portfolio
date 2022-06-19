@@ -1,0 +1,500 @@
+@use "common" as *;
+
+/* product-finder start */
+
+.products-finder-area {
+  background: #f8f8f8;
+}
+
+
+
+.link-page {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      display: inline-block;
+      a {
+        color: #57cadd;
+        font-size: 16px;
+        font-weight: 600;
+        &:hover {
+          color: #325369;
+        }
+        i {
+          color: #325369;
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+}
+
+.search-wrap-product-finder {
+  .input-wrap {
+    position: relative;
+    display: inline-block;
+    .icon {
+      position: absolute;
+      left: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0 10px;
+      color: #cbcbcb;
+    }
+    input {
+      width: 200px;
+      height: 50px;
+      padding: 15px;
+      padding-left: 40px;
+      border: 1px solid #dbdbdb;
+      outline: none;
+      border-radius: 5px;
+      font-size: 18px;
+      color: #cbcbcb;
+      @include mq(xs) {
+        font-size: 16px;
+      }
+      &::placeholder {
+        color: #cbcbcb;
+        font-size: 18px;
+        @include mq(xs) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.brand-navigation {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 40px;
+      @include mq(xs) {
+        margin-right: 15px;
+        width: 155px;
+        text-align: center;
+      }
+
+      a {
+        display: inline-block;
+        font-size: 18px;
+        color: #333;
+        padding: 10px 0;
+        border-bottom: 3px solid transparent;
+        @include mq(xs) {
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+        &:hover {
+          color: $theme-color;
+          border-color: $theme-color;
+        }
+      }
+    }
+  }
+}
+
+.all-resources-wrapper {
+  display: inline-block;
+  margin-right: 24px;
+  @include mq(lg) {
+    margin-bottom: 20px;
+  }
+  @include mq(md) {
+    margin-bottom: 20px;
+  }
+  @include mq(xs) {
+    display: block;
+  }
+  .input-wrap {
+    display: inline-block;
+    position: relative;
+    @include mq(xs) {
+      display: block;
+    }
+    select {
+      border: 1px solid #c9c9c9;
+      outline: none;
+      border-radius: 5px;
+      height: 50px;
+      width: 220px;
+      padding: 0 13px;
+      font-size: 15px;
+      appearance: none;
+      color: #36586d;
+      font-weight: 600;
+      cursor: pointer;
+      @include mq(xl){
+        width: 190px;
+      }
+      @include mq(md) {
+        width: 195px;
+        margin-right: 8px;
+        padding: 0px 10px;
+      }
+      @include mq(xs) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .input-select {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "\f0dd";
+      color: $theme-color;
+      margin-top: -2.5px;
+	  right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 700;
+      pointer-events: none;
+      @include mq(md){
+        right: 20px;
+      }
+    }
+  }
+}
+
+.filter-product-area {
+  background: #fff;
+  @include mq(xs) {
+    background: #f8f8f8;
+  }
+}
+
+.mobile-filter {
+  @include mq(xs) {
+    margin-bottom: 0;
+  }
+  .mobile-filter-btn {
+    display: inline-block;
+    width: 271px;
+    margin-right: 15px;
+    border: 1px solid #a8a8a8;
+    padding: 14px 0 14px 10px;
+    border-radius: 5px;
+    img {
+      margin-right: 11px;
+    }
+    span {
+      color: #a8a8a8;
+      font-size: 16px;
+    }
+  }
+
+  .mobile-search-btn {
+    display: inline-block;
+    width: 48px;
+    border: 1px solid #a8a8a8;
+    padding: 12px 0;
+    text-align: center;
+    border-radius: 5px;
+    i {
+      color: #57cadd;
+      font-size: 18px;
+    }
+  }
+}
+
+.section-title.dextop-title.mobile-title {
+  h2 {
+    @include mq(xs) {
+      font-size: 30px;
+    }
+  }
+  h3 {
+    @include mq(xs) {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+}
+
+.dextop-title {
+  h2 {
+    font-size: 54px;
+  }
+  h3 {
+    font-size: 32px;
+  }
+}
+
+.read-more {
+  a {
+    display: inline-block;
+    color: #416173;
+    font-size: 18px;
+    line-height: 1;
+    text-decoration: underline;
+
+    span {
+      color: #32c3db;
+      text-decoration-line: underline;
+      font-weight: 600;
+    }
+
+    i {
+      margin-left: 5px;
+    }
+  }
+}
+
+
+
+.all-resources-bottom {
+  .read-more-btn {
+    display: inline-block;
+    padding: 10px 40px;
+    color: $theme-color;
+    background: transparent;
+    border: 1px solid $theme-color;
+    border-radius: 5px;
+    @include mq(xs) {
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+    }
+
+    &:hover {
+      background: $theme-color;
+      color: #fff;
+    }
+  }
+}
+
+.feature-area {
+  background: #f2fbfd;
+}
+
+.feature-wrap {
+  .thumb {
+    margin-bottom: 20px;
+  }
+
+  .content {
+    h3 {
+      font-size: 30px;
+      line-height: 40px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .read-more {
+      display: inline-block;
+      padding: 10px 40px;
+      color: $theme-color;
+      background: transparent;
+      border: 1px solid $theme-color;
+      border-radius: 5px;
+      @include mq(xs) {
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+      }
+
+      &:hover {
+        background: $theme-color;
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* products finder end */
+
+/* portfolio finder start */
+
+.find-dealer-area {
+  .bg-theme {
+    border-radius: 5px;
+  }
+}
+
+.find-dealer-content {
+  @include mq(xs) {
+    margin-bottom: 20px;
+  }
+
+  span {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 500;
+    @include mq(xs) {
+      font-size: 30px;
+    }
+  }
+}
+
+.find-dealer-btn {
+  .btn-white {
+    background: #fff;
+    @include mq(xs) {
+      width: 100%;
+      text-align: center;
+    }
+
+    &:hover {
+      background: #000;
+    }
+  }
+}
+
+.read-more-btn {
+  display: inline-block;
+  padding: 10px 40px;
+  color: $theme-color;
+  background: transparent;
+  border: 1px solid $theme-color;
+  border-radius: 5px;
+
+  &:hover {
+    background: $theme-color;
+    color: #fff;
+  }
+}
+
+.brand-products-range {
+  .osmocote-pro-wrap {
+    position: relative;
+    background: #e5f8fb;
+    padding: 30px 20px;
+    border-radius: 5px;
+    @include mq(xs) {
+      margin-bottom: 20px;
+    }
+    .osmocote-title {
+      font-weight: 800;
+    }
+    .osmocote-short-description.big-font {
+      @include mq(md) {
+        margin-bottom: 20px;
+      }
+      @include mq(xs) {
+        margin-bottom: 16px;
+
+        padding-right: 47px;
+      }
+      span {
+        font-size: 24px;
+        font-weight: 500;
+        @include mq(xl) {
+          font-size: 20px;
+        }
+        @include mq(lg) {
+          font-size: 18px;
+        }
+        @include mq(md) {
+          font-size: 20px;
+        }
+        @include mq(xs) {
+          font-size: 16px;
+        }
+      }
+    }
+    .osmocote-btn-arrow {
+      @include mq(md) {
+        text-align: left;
+      }
+      @include mq(xs) {
+        text-align: left;
+      }
+      .osmocote-arr-btn-1,
+      .osmocote-arr-btn-2 {
+        display: inline-block;
+        padding: 8px;
+        text-align: center;
+        background: #c3eef6;
+        color: #00b5d3;
+        font-size: 18px;
+        margin-right: 40px;
+        @include mq(lg){
+          margin-right: 25px;
+        }
+        @include mq(xs) {
+          font-size: 12px;
+          padding: 6px 12px;
+          margin-right: 0;
+        }
+      }
+      .osmocote-arr-btn-1 {
+        margin-right: 16px !important;
+        @include mq(xs) {
+          margin-right: 8px !important;
+        }
+      }
+      a {
+        color: #1e465e;
+        i {
+          font-size: 24px;
+          @include mq(md) {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          @include mq(xs) {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+
+  .osmocote-icon {
+    img {
+      max-width: 100%;
+      @include mq(md) {
+        width: 150px;
+      }
+      @include mq(xs) {
+        width: 125px;
+      }
+    }
+    @include mq(md) {
+      margin-bottom: 20px;
+    }
+    @include mq(xs) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+br {
+  @include mq(xs) {
+    display: none;
+  }
+}
+
+.find-dealer-area {
+  padding-bottom: 80px;
+  @include mq(lg) {
+    padding-bottom: 60px;
+  }
+  @include mq(md) {
+    padding-bottom: 60px;
+  }
+  @include mq(xs) {
+    padding-bottom: 0;
+  }
+}
+
+/* portfolio finder end */
